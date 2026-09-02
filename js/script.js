@@ -3,6 +3,20 @@
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  /* ---------- Store location map (Leaflet / OpenStreetMap) ---------- */
+  var mapEl = document.getElementById("storeMap");
+  if (mapEl && window.L) {
+    var storeLatLng = [51.349428, -2.975768];
+    var map = L.map("storeMap", { scrollWheelZoom: true }).setView(storeLatLng, 16);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    L.marker(storeLatLng).addTo(map)
+      .bindPopup("<strong>Afri Spice</strong><br />46 Orchard Street, Weston-super-Mare, BS23 1RH")
+      .openPopup();
+  }
+
   /* ---------- Scroll progress bar ---------- */
   var progress = document.getElementById("scrollProgress");
   function updateProgress() {

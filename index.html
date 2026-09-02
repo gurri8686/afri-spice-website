@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="assets/img/logo.jpg" />
 </head>
@@ -301,12 +302,7 @@
         </div>
 
         <div class="contact__map reveal" data-delay="120">
-          <iframe
-            title="Afri Spice location map"
-            src="https://www.google.com/maps?q=46+Orchard+Street,+Weston-super-Mare,+BS23+1RH&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <div id="storeMap" aria-label="Afri Spice location map"></div>
           <a href="https://www.google.com/maps/dir/?api=1&destination=46+Orchard+Street,+Weston-super-Mare,+BS23+1RH" target="_blank" rel="noopener" class="contact__map-cta">
             Get Directions <span class="btn__arrow">→</span>
           </a>
@@ -349,6 +345,7 @@
 
   <a href="tel:+447723451857" class="fab-call" aria-label="Call Afri Spice">📞</a>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
